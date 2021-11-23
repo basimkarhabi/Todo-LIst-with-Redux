@@ -9,3 +9,5 @@ first file :
 
   Connect redux to app : 
   Provieder & storage will wrapped around the root component 
+  add fontawesome
+  implemenat Add Task in action

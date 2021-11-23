@@ -4,10 +4,7 @@ const initialData = {
     taskItems: []
 }
 
-//initialize our reducer it take 2 parameters One for the State , the Two is action ist our function  
 const taskReducer = (state = initialData, action) => {
-
-  //switch action : function take that action & use the action and implement Action
     switch(action.type) {
         case ADD_TASK:
             return {
@@ -21,7 +18,7 @@ const taskReducer = (state = initialData, action) => {
             }
         case COMPLETE_TASK:
             let updatedTaskItems = []
-            state.taskItems.map((task) => {
+            state.taskItems.map((task)=>{
                 if(task.text === action.payload) {
                     if(task.completed === true) {
                         task.completed = false

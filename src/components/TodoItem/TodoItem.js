@@ -1,10 +1,10 @@
-import React from 'react'
-import styles from './TodoItem.styles.js'
+import React from "react";
+import styles from "./TodoItem.styles.js"
 
-function TodoItem({ task, deleteTodo, completeTodo }) {
-    return (
-        <div>
-             <div style={styles.taskContainer}>
+export default function TodoItem({ task, deleteTodo, completeTodo }) {
+  return (
+    <div>
+      <div style={styles.taskContainer}>
         <div style={styles.taskWrapper}>
           <p style={{ ...styles.task, textDecoration: task.completed === true ? 'line-through' : 'none' }}>{task.text}</p>
           <div style={styles.iconsWrapper}>
@@ -13,9 +13,6 @@ function TodoItem({ task, deleteTodo, completeTodo }) {
           </div>
         </div>
       </div>
-            
-        </div>
-    )
+    </div>
+  );
 }
-
-export default TodoItem
